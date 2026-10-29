@@ -10,6 +10,7 @@ const BOOKS = gql`
       author
       genre
       rating
+      publishedYear
     }
   }
 `
@@ -25,12 +26,12 @@ export default function BookList() {
       <h1>Bookshelf</h1>
       <table width="100%" cellPadding={8}>
         <thead>
-          <tr><th align="left">Title</th><th align="left">Author</th><th align="left">Genre</th><th align="right">Rating</th></tr>
+          <tr><th align="left">Title</th><th align="left">Author</th><th align="left">Genre</th><th align="right">Year</th><th align="right">Rating</th></tr>
         </thead>
         <tbody>
           {data.books.map((book) => (
             <tr key={book.id}>
-              <td>{book.title}</td><td>{book.author}</td><td>{book.genre}</td><td align="right">{book.rating}</td>
+              <td>{book.title}</td><td>{book.author}</td><td>{book.genre}</td><td align="right">{book.publishedYear}</td><td align="right">{book.rating}</td>
             </tr>
           ))}
         </tbody>
