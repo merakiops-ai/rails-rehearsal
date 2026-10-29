@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "deny": [
+      "Bash(git push origin main*)",
+      "Bash(git push -f*)",
+      "Bash(git push --force*)",
+      "Bash(gh pr merge*)",
+      "Bash(git merge*)",
+      "Bash(heroku *)",
+      "Read(./.env*)",
+      "Read(./config/master.key)",
+      "Read(./config/credentials/**)"
+    ]
+  }
+}
