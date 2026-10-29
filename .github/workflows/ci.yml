@@ -28,5 +28,5 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: bin/rails db:prepare
+      - run: bin/rails db:create db:schema:load  # not db:prepare: on a fresh database it also loads the seeds
       - run: bundle exec rspec
