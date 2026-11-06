@@ -25,6 +25,7 @@ database changes need developer sign-off.
 - Development uses fake data and no live API keys. Never add a real key.
 
 ## Commands
+- Understand a part of the app before changing it: `/explain <feature>`
 - Start the app: `bin/dev`, then open http://localhost:3000
 - Reset the fake data: `bin/rails db:seed`
 - Run the checks: `bundle exec rspec`
