@@ -21,9 +21,9 @@ module Types
     # Add root-level fields here.
     # They will be entry points for queries on your schema.
 
-    field :books, [Types::BookType], null: false, description: "All books, best rated first."
+    field :books, [Types::BookType], null: false, description: "All books, sorted by title (A–Z)."
     def books
-      Book.order(rating: :desc, title: :asc)
+      Book.order(title: :asc)
     end
   end
 end
